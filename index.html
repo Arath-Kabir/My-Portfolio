@@ -423,6 +423,25 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
+    }
+
+    .image-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      text-align: center;
+      padding: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: linear-gradient(135deg, rgba(137,168,255,0.18), rgba(97,215,232,0.10));
     }
 
     .photo-placeholder {
@@ -525,7 +544,7 @@
             structured problem solving, and business awareness to support better decisions, stronger systems, and clearer stakeholder communication.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="mailto:arath.kabir@gmail.com">Contact Me</a>
+            <a class="btn btn-primary" href="mailto:aath.bir@gmail.com">Contact Me</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/ahteshamul-kabir" target="_blank" rel="noreferrer">View LinkedIn</a>
           </div>
           <div class="mini-stats">
@@ -543,8 +562,7 @@
             </div>
           </div>
           <a class="resume-link" href="assets/resume/final-resume.pdf" target="_blank">
-            <strong>Download Resume</strong>
-            <span class="muted">Replace this file with your latest PDF resume in assets/resume/final-resume.pdf</span>
+            <strong>Download My Resume</strong>
           </a>
         </div>
 
@@ -567,7 +585,7 @@
             </div>
             <div class="meta-item">
               <div class="meta-label">Focus</div>
-              <div class="meta-value">Data Analytics, Business Analytics, Reporting, Technical Problem Solving</div>
+              <div class="meta-value">Data Analytics, Business Analytics, Reporting, Technical Support</div>
             </div>
           </div>
         </aside>
@@ -689,11 +707,21 @@
         </div>
         <div class="project-showcase">
           <div class="project-photo">
-            <div class="project-thumb photo-placeholder"><span>Add project image or diagram 01<br />assets/images/project-1.jpg</span></div>
+            <div class="project-thumb">
+              <div class="image-frame">
+                <img src="assets/images/project-1.jpg" alt="Project visual 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add project image or diagram 01<br />assets/images/project-1.jpg</div>
+              </div>
+            </div>
             <div class="project-caption">Short subtitle for project image, dashboard, architecture, or documentation proof.</div>
           </div>
           <div class="project-photo">
-            <div class="project-thumb photo-placeholder"><span>Add project image or diagram 02<br />assets/images/project-2.jpg</span></div>
+            <div class="project-thumb">
+              <div class="image-frame">
+                <img src="assets/images/project-2.jpg" alt="Project visual 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add project image or diagram 02<br />assets/images/project-2.jpg</div>
+              </div>
+            </div>
             <div class="project-caption">Second project visual with a concise description of what it demonstrates.</div>
           </div>
         </div>
@@ -779,22 +807,42 @@
           <p style="margin-bottom:16px;">Each certificate card below is designed so you can add an image and a short subtitle under it.</p>
           <div class="credential-grid">
             <div class="credential-item">
-              <div class="credential-thumb photo-placeholder"><span>Add certificate image 01<br />assets/images/certificate-1.jpg</span></div>
+              <div class="credential-thumb">
+                <div class="image-frame">
+                  <img src="assets/images/certificate-1.jpg" alt="Digital Literacy Course certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                  <div class="image-fallback">Add certificate image 01<br />assets/images/certificate-1.jpg</div>
+                </div>
+              </div>
               <p><strong>Digital Literacy Course</strong></p>
               <p>ICT Division, Bangladesh | 2022</p>
             </div>
             <div class="credential-item">
-              <div class="credential-thumb photo-placeholder"><span>Add certificate image 02<br />assets/images/certificate-2.jpg</span></div>
+              <div class="credential-thumb">
+                <div class="image-frame">
+                  <img src="assets/images/certificate-2.jpg" alt="Computer and ICT Skills certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                  <div class="image-fallback">Add certificate image 02<br />assets/images/certificate-2.jpg</div>
+                </div>
+              </div>
               <p><strong>Computer & ICT Skills Certification</strong></p>
               <p>University of Rajshahi, Bangladesh | 2022</p>
             </div>
             <div class="credential-item">
-              <div class="credential-thumb photo-placeholder"><span>Add future certificate image 03</span></div>
+              <div class="credential-thumb">
+                <div class="image-frame">
+                  <img src="assets/images/certificate-3.jpg" alt="Future certificate 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                  <div class="image-fallback">Add future certificate image 03<br />assets/images/certificate-3.jpg</div>
+                </div>
+              </div>
               <p><strong>Future Certification</strong></p>
               <p>Add title, issuer, and year here.</p>
             </div>
             <div class="credential-item">
-              <div class="credential-thumb photo-placeholder"><span>Add future certificate image 04</span></div>
+              <div class="credential-thumb">
+                <div class="image-frame">
+                  <img src="assets/images/certificate-4.jpg" alt="Future certificate 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                  <div class="image-fallback">Add future certificate image 04<br />assets/images/certificate-4.jpg</div>
+                </div>
+              </div>
               <p><strong>Future Certification</strong></p>
               <p>Add title, issuer, and year here.</p>
             </div>
@@ -865,15 +913,30 @@
         </div>
         <div class="activity-grid">
           <div class="gallery-item">
-            <div class="activity-thumb photo-placeholder"><span>Add activity image 01<br />assets/images/activity-1.jpg</span></div>
+            <div class="activity-thumb">
+              <div class="image-frame">
+                <img src="assets/images/activity-1.jpg" alt="Activity image 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add activity image 01<br />assets/images/activity-1.jpg</div>
+              </div>
+            </div>
             <div class="gallery-caption">Short caption for leadership, volunteering, or event coordination activity.</div>
           </div>
           <div class="gallery-item">
-            <div class="activity-thumb photo-placeholder"><span>Add activity image 02<br />assets/images/activity-2.jpg</span></div>
+            <div class="activity-thumb">
+              <div class="image-frame">
+                <img src="assets/images/activity-2.jpg" alt="Activity image 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add activity image 02<br />assets/images/activity-2.jpg</div>
+              </div>
+            </div>
             <div class="gallery-caption">Short professional subtitle describing your role in the activity.</div>
           </div>
           <div class="gallery-item">
-            <div class="activity-thumb photo-placeholder"><span>Add activity image 03<br />assets/images/activity-3.jpg</span></div>
+            <div class="activity-thumb">
+              <div class="image-frame">
+                <img src="assets/images/activity-3.jpg" alt="Activity image 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add activity image 03<br />assets/images/activity-3.jpg</div>
+              </div>
+            </div>
             <div class="gallery-caption">Use concise, formal language rather than casual event descriptions.</div>
           </div>
         </div>
@@ -893,15 +956,30 @@
         </div>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <div class="gallery-thumb photo-placeholder"><span>Add gallery image 01</span></div>
+            <div class="gallery-thumb">
+              <div class="image-frame">
+                <img src="assets/images/gallery-1.jpg" alt="Gallery image 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add gallery image 01<br />assets/images/gallery-1.jpg</div>
+              </div>
+            </div>
             <div class="gallery-caption">Add a short professional subtitle below the image.</div>
           </div>
           <div class="gallery-item">
-            <div class="gallery-thumb photo-placeholder"><span>Add gallery image 02</span></div>
+            <div class="gallery-thumb">
+              <div class="image-frame">
+                <img src="assets/images/gallery-2.jpg" alt="Gallery image 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add gallery image 02<br />assets/images/gallery-2.jpg</div>
+              </div>
+            </div>
             <div class="gallery-caption">Keep subtitles factual, concise, and employer-friendly.</div>
           </div>
           <div class="gallery-item">
-            <div class="gallery-thumb photo-placeholder"><span>Add gallery image 03</span></div>
+            <div class="gallery-thumb">
+              <div class="image-frame">
+                <img src="assets/images/gallery-3.jpg" alt="Gallery image 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+                <div class="image-fallback">Add gallery image 03<br />assets/images/gallery-3.jpg</div>
+              </div>
+            </div>
             <div class="gallery-caption">This can highlight presentations, networking, volunteering, or academic moments.</div>
           </div>
         </div>
@@ -928,7 +1006,7 @@
               reporting, and technical support roles with analytical responsibility.
             </p>
             <div class="contact-links">
-              <a class="contact-link" href="mailto:aath.bir@gmail.com"><strong>Email</strong><br />aath.bir@gmail.com</a>
+              <a class="contact-link" href="mailto:arath.kabir@gmail.com"><strong>Email</strong><br />arath.kabir@gmail.com</a>
               <a class="contact-link" href="https://www.linkedin.com/in/ahteshamul-kabir" target="_blank" rel="noreferrer"><strong>LinkedIn</strong><br />www.linkedin.com/in/ahteshamul-kabir</a>
               <a class="contact-link" href="assets/resume/final-resume.pdf" target="_blank"><strong>Resume</strong><br />Open the downloadable PDF version of my resume</a>
             </div>
