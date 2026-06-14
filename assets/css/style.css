@@ -460,19 +460,14 @@ img {
   overflow: hidden;
 }
 
+/* All Project Images (Project 1, 2, 3, 4) */
 .media-grid .media-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  height: auto;
-  object-fit: cover;
-  background: #e8e8e8;
-}
-
-.media-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;   /* 1600 × 1000 */
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16 / 10;   /* 1600 × 1000 */
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .certificate-grid .media-card img {
