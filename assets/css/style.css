@@ -460,14 +460,19 @@ img {
   overflow: hidden;
 }
 
-.media-card img {
-  height: 240px;
+.media-grid .media-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
   object-fit: cover;
   background: #e8e8e8;
 }
 
-.media-grid .media-card img {
-  height: 310px;
+.media-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;   /* 1600 × 1000 */
+  height: auto;
+  object-fit: cover;
 }
 
 .certificate-grid .media-card img {
