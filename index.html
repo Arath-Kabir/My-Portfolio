@@ -3,993 +3,318 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Z M Ahteshamul Kabir | Data Analyst | Business Analyst</title>
-  <meta name="description" content="Professional portfolio website of A Z M Ahteshamul Kabir, focused on Data Analytics, Business Analytics, ERP analysis, reporting, and business-focused problem solving." />
-  <style>
-    :root {
-      --bg: #07111f;
-      --bg-soft: #0f1a30;
-      --panel: rgba(14, 23, 43, 0.82);
-      --panel-2: rgba(255, 255, 255, 0.05);
-      --text: #e8eefc;
-      --muted: #b6c3df;
-      --line: rgba(255, 255, 255, 0.1);
-      --accent: #89a8ff;
-      --accent-2: #61d7e8;
-      --accent-3: #c9d8ff;
-      --success: #97efc7;
-      --shadow: 0 20px 50px rgba(0, 0, 0, 0.32);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(137, 168, 255, 0.20), transparent 26%),
-        radial-gradient(circle at top right, rgba(97, 215, 232, 0.14), transparent 30%),
-        linear-gradient(180deg, #06111d 0%, #08101d 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(7, 17, 31, 0.76);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      gap: 18px;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      font-size: 1rem;
-    }
-
-    .brand span { color: var(--accent-2); }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-      transition: 0.2s ease;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 18px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      transition: 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #08101f;
-      box-shadow: var(--shadow);
-    }
-
-    .btn-primary:hover,
-    .btn-secondary:hover,
-    .contact-link:hover,
-    .gallery-item:hover,
-    .project-photo:hover,
-    .resume-link:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.04);
-      border-color: rgba(255,255,255,0.12);
-      color: var(--text);
-    }
-
-    .hero {
-      padding: 74px 0 42px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.35fr 0.95fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .glass {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-    }
-
-    .hero-card,
-    .profile-card,
-    .card {
-      padding: 28px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--success);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 5vw, 4.4rem);
-      line-height: 1.05;
-      margin: 0 0 16px;
-      letter-spacing: -0.04em;
-    }
-
-    .gradient {
-      background: linear-gradient(135deg, #ffffff, var(--accent-2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero p {
-      font-size: 1.04rem;
-      color: var(--muted);
-      max-width: 720px;
-      margin: 0 0 22px;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 26px;
-    }
-
-    .mini-stats,
-    .gallery-grid,
-    .credential-grid,
-    .activity-grid,
-    .membership-grid {
-      display: grid;
-      gap: 14px;
-    }
-
-    .mini-stats { grid-template-columns: repeat(3, 1fr); }
-    .gallery-grid,
-    .activity-grid { grid-template-columns: repeat(3, 1fr); }
-    .credential-grid,
-    .membership-grid { grid-template-columns: repeat(2, 1fr); }
-
-    .mini-stat,
-    .gallery-item,
-    .credential-item,
-    .membership-item,
-    .resume-link,
-    .contact-box,
-    .project-photo,
-    .photo-placeholder {
-      background: var(--panel-2);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-    }
-
-    .mini-stat { padding: 16px; }
-
-    .mini-stat strong {
-      display: block;
-      font-size: 1.18rem;
-      margin-bottom: 5px;
-    }
-
-    .mini-stat span,
-    .gallery-caption,
-    .credential-item p,
-    .membership-item p,
-    .photo-placeholder span,
-    .project-caption {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .profile-card {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .profile-photo {
-      aspect-ratio: 0.93 / 1.02;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(135deg, rgba(137,168,255,0.20), rgba(97,215,232,0.12));
-    }
-
-    .profile-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .profile-meta {
-      display: grid;
-      gap: 12px;
-    }
-
-    .meta-item {
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .meta-label {
-      color: var(--accent-2);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
-
-    .meta-value {
-      color: var(--text);
-      font-weight: 600;
-      word-break: break-word;
-    }
-
-    section { padding: 26px 0; }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 18px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(1.55rem, 2vw, 2.02rem);
-      letter-spacing: -0.03em;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 660px;
-    }
-
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-    }
-
-    .skill-card h3,
-    .timeline-card h3,
-    .project-card h3,
-    .edu-card h3,
-    .cert-card h3,
-    .activity-card h3,
-    .pub-card h3,
-    .gallery-shell h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.08rem;
-    }
-
-    .skill-card ul,
-    .project-card ul,
-    .activity-card ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .project-main,
-    .contact-card,
-    .two-col,
-    .project-showcase {
-      display: grid;
-      gap: 18px;
-    }
-
-    .project-main { grid-template-columns: 1.2fr 0.8fr; }
-    .project-showcase { grid-template-columns: 1fr 1fr; margin-top: 18px; }
-    .two-col { grid-template-columns: 1fr 1fr; }
-    .contact-card { grid-template-columns: 1.1fr 0.9fr; align-items: stretch; }
-
-    .project-topline,
-    .small-label,
-    .section-kicker {
-      color: var(--accent-2);
-      font-size: 0.86rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 10px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .tag {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .timeline { display: grid; gap: 16px; }
-
-    .timeline-card p,
-    .edu-card p,
-    .cert-card p,
-    .pub-card p,
-    .project-card p,
-    .activity-card p,
-    .contact-card p,
-    .gallery-shell p {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .date {
-      color: var(--accent);
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .gallery-item,
-    .credential-item,
-    .membership-item,
-    .resume-link,
-    .project-photo {
-      padding: 16px;
-      transition: 0.22s ease;
-    }
-
-    .gallery-thumb,
-    .credential-thumb,
-    .project-thumb,
-    .activity-thumb {
-      aspect-ratio: 1.2 / 0.9;
-      border-radius: 14px;
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(137,168,255,0.18), rgba(97,215,232,0.10));
-      border: 1px solid rgba(255,255,255,0.08);
-      margin-bottom: 12px;
-    }
-
-    .credential-thumb { aspect-ratio: 1.25 / 0.82; }
-    .activity-thumb { aspect-ratio: 1 / 0.9; }
-
-    .gallery-thumb img,
-    .credential-thumb img,
-    .project-thumb img,
-    .activity-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .image-frame {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .image-fallback {
-      position: absolute;
-      inset: 0;
-      display: none;
-      place-items: center;
-      text-align: center;
-      padding: 18px;
-      color: var(--muted);
-      font-size: 0.92rem;
-      background: linear-gradient(135deg, rgba(137,168,255,0.18), rgba(97,215,232,0.10));
-    }
-
-    .photo-placeholder {
-      min-height: 180px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 18px;
-    }
-
-    .project-caption,
-    .gallery-caption { margin-top: 4px; }
-
-    .resume-link {
-      display: block;
-      margin-top: 18px;
-    }
-
-    .resume-link strong { display: block; margin-bottom: 6px; }
-
-    .contact-box { padding: 18px; }
-
-    .contact-links {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .contact-link {
-      display: block;
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: 0.2s ease;
-    }
-
-    footer {
-      padding: 26px 0 40px;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    .muted { color: var(--muted); }
-
-    @media (max-width: 1050px) {
-      .hero-grid,
-      .project-main,
-      .contact-card,
-      .two-col,
-      .grid-3,
-      .project-showcase,
-      .gallery-grid,
-      .activity-grid,
-      .credential-grid,
-      .membership-grid,
-      .mini-stats {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero { padding-top: 46px; }
-      .hero-card, .profile-card, .card { padding: 20px; }
-      .nav-links { gap: 12px; }
-    }
-  </style>
+  <title>A Z M Ahteshamul Kabir | Portfolio</title>
+  <meta name="description" content="Personal portfolio website of A Z M Ahteshamul Kabir for Data Analytics, Business Analytics and Information Systems roles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/script.js"></script>
 </head>
+
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="#home" class="brand">A Z M AHTESHAMUL <span>KABIR</span></a>
-      <div class="nav-links">
+  <main class="portfolio-shell">
+    <div class="decor decor-left"></div>
+    <div class="decor decor-right"></div>
+
+    <nav class="inside-nav">
+      <div class="nav-left">
+        <a href="#home">Home</a>
+        <a href="#project">Portfolio</a>
+        <a href="#certifications">Certificates</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#project">Project</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#activities">Activities</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
       </div>
-    </div>
-  </nav>
 
-  <main id="home">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="glass hero-card">
-          <div class="eyebrow">Open to Data Analyst, Business Analyst, and Technical Support opportunities</div>
-          <h1>Turning data into <span class="gradient">business clarity</span>.</h1>
-          <p>
-            I am A Z M Ahteshamul Kabir, a postgraduate in Information Systems and Technology with a strong foundation in data analysis,
-            business analytics, reporting, ERP security validation, and technical documentation. I combine analytical thinking,
-            structured problem solving, and business awareness to support better decisions, stronger systems, and clearer stakeholder communication.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="mailto:arath.kabir@gmail.com">Contact Me</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ahteshamul-kabir" target="_blank" rel="noreferrer">View LinkedIn</a>
-          </div>
-          <div class="mini-stats">
-            <div class="mini-stat">
-              <strong>Analytics Stack</strong>
-              <span>SQL, Python, R, Power BI, Excel</span>
-            </div>
-            <div class="mini-stat">
-              <strong>Professional Strengths</strong>
-              <span>ERP analysis, reporting, documentation, systems thinking</span>
-            </div>
-            <div class="mini-stat">
-              <strong>Career Direction</strong>
-              <span>Entry-level Data Analyst, Business Analyst, and technical support roles</span>
-            </div>
-          </div>
-          <a class="resume-link" href="assets/resume/final-resume.pdf" target="_blank">
-            <strong>View My Resume</strong>
-          </a>
-        </div>
+      <span class="center-logo empty-logo"></span>
 
-        <aside class="glass profile-card">
-          <div class="profile-photo">
-            <img src="assets/images/profile.jpg" alt="Portrait of A Z M Ahteshamul Kabir" />
-          </div>
-          <div class="profile-meta">
-            <div class="meta-item">
-              <div class="meta-label">Location</div>
-              <div class="meta-value">Bentley, WA 6102, Australia</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Email</div>
-              <div class="meta-value">arath.kabir@gmail.com</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">LinkedIn</div>
-              <div class="meta-value">linkedin.com/in/ahteshamul-kabir</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Focus</div>
-              <div class="meta-value">Data Analytics, Business Analytics, Reporting, Technical Support</div>
-            </div>
-          </div>
-        </aside>
+      <div class="nav-icons">
+        <a href="mailto:arath.kabir@gmail.com" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4V6zm8 7L5.6 8h12.8L12 13zm-1.1 1.4L6 10.6V16h12v-5.4l-4.9 3.8a1.8 1.8 0 0 1-2.2 0z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ahteshamul-kabir" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M6.9 8.8H3.7V20h3.2V8.8zM5.3 4C4.2 4 3.5 4.7 3.5 5.6s.7 1.6 1.8 1.6 1.8-.7 1.8-1.6S6.4 4 5.3 4zM20.5 13.6c0-3-1.6-5-4.2-5-1.8 0-2.7 1-3.2 1.8V8.8H9.9V20h3.2v-6.1c0-1.6.9-2.6 2.2-2.6 1.2 0 2 .8 2 2.6V20h3.2v-6.4z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M14 8h2.5V4.2C16.1 4.1 14.8 4 13.6 4c-2.7 0-4.5 1.6-4.5 4.6V11H6v4h3.1v5H13v-5h3.1l.5-4H13V9c0-.8.2-1 1-1z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M7.5 4h9A3.5 3.5 0 0 1 20 7.5v9a3.5 3.5 0 0 1-3.5 3.5h-9A3.5 3.5 0 0 1 4 16.5v-9A3.5 3.5 0 0 1 7.5 4zm0 2A1.5 1.5 0 0 0 6 7.5v9A1.5 1.5 0 0 0 7.5 18h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 16.5 6h-9zM12 8.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6zm0 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm4.1-2.7a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8z"/></svg>
+        </a>
       </div>
-    </section>
+    </nav>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-head">
+    <section id="home" class="hero-card hero-redesign">
+      <aside class="hero-intro reveal">
+        <div class="availability-badge">Available for Graduate Roles</div>
+        <p class="intro-label">Information Systems Graduate</p>
+        <h2>A Z M Ahteshamul Kabir</h2>
+        <p class="intro-role">Data Analyst & Business Analyst</p>
+        <p>
+          I transform raw data into meaningful insights and support organisations through business reporting,
+          ERP analysis, technical documentation, and data-driven decision-making.
+        </p>
+        
+      </aside>
+
+      <aside class="service-list reveal">
+        <h3>Core Expertise</h3>
+        <div class="service-item">
+          <span>01</span>
           <div>
-            <div class="section-kicker">Professional introduction</div>
-            <h2>Profile</h2>
+            <strong>Data Analytics</strong>
+            <p>Transforming raw data into clear, practical insights.</p>
           </div>
         </div>
-        <div class="card">
-          <p>
-            Data Analytics and Business Analytics professional with a strong foundation in data analysis, data visualisation, and information systems. Proficient in SQL, Python, R, Power BI, and Excel, with the ability to transform complex datasets into actionable insights that support informed business decision-making. Experienced in ERP data analysis, system security validation, and cloud-based solution design, including implementing encryption mechanisms and containerised deployments. Demonstrates strong analytical thinking, problem-solving capability, and technical documentation skills. Seeking a junior or entry-level role in Technical Support, Data Analysis, or Business Analysis to deliver data-driven insights, enhance business processes, and support strategic decision-making.
-          </p>
+        <div class="service-item">
+          <span>02</span>
+          <div>
+            <strong>Business Intelligence</strong>
+            <p>Dashboards, reports and business-focused storytelling.</p>
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="service-item">
+          <span>03</span>
+          <div>
+            <strong>Database Management</strong>
+            <p>SQL querying, data modelling and structured data handling.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <span>04</span>
+          <div>
+            <strong>ERP & Security</strong>
+            <p>ERP validation, documentation and security-aware support.</p>
+          </div>
+        </div>
+      </aside>
 
-    <section id="skills">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Capability overview</div>
-            <h2>Core Skills</h2>
-          </div>
+      <section class="hero-main reveal">
+        <div class="portrait-frame">
+          <img src="assets/images/profile.jpg" alt="A Z M Ahteshamul Kabir profile photo">
         </div>
-        <div class="grid-3">
-          <div class="card skill-card">
-            <h3>Data Analytics & Business Intelligence</h3>
-            <ul>
-              <li>SQL for data extraction, joins, querying, and optimisation</li>
-              <li>Python for analysis, scripting, and workflow support</li>
-              <li>R for statistical analysis</li>
-              <li>Power BI for dashboards and reporting</li>
-              <li>Excel for statistical analysis and structured reporting</li>
-            </ul>
-          </div>
-          <div class="card skill-card">
-            <h3>Data & Systems</h3>
-            <ul>
-              <li>Data cleaning and transformation</li>
-              <li>Data visualisation and reporting</li>
-              <li>Database design and data modelling</li>
-              <li>ERP data analysis</li>
-              <li>Information organisation and technical documentation</li>
-            </ul>
-          </div>
-          <div class="card skill-card">
-            <h3>Tools & Technologies</h3>
-            <ul>
-              <li>Jupyter Notebook and Visual Studio Code</li>
-              <li>Git and GitHub</li>
-              <li>Microsoft Visio</li>
-              <li>IBM Informix Database</li>
-              <li>Adobe Photoshop and Adobe Illustrator</li>
-            </ul>
-          </div>
+        <div class="profile-actions-under-photo">
+          <a href="assets/resume/final-resume.pdf" target="_blank">View Resume</a>
+          <a href="mailto:arath.kabir@gmail.com">Contact Me</a>
         </div>
-      </div>
-    </section>
-
-    <section id="project">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Featured work</div>
-            <h2>Consultancy Project</h2>
-          </div>
-        </div>
-        <div class="project-main">
-          <div class="card project-card">
-            <div class="project-topline">Scope Systems, Australia | 2026</div>
-            <h3>ERP Security Validation & Cloud Architecture</h3>
-            <p>Role: Technical Support & Documentation Manager</p>
-            <ul>
-              <li>Analysed ERP security datasets using SQL and Python to validate system outputs and identify inconsistencies.</li>
-              <li>Improved system security by resolving hardcoded credential vulnerabilities and implementing AES encryption.</li>
-              <li>Increased deployment efficiency by containerising the application into Docker images, enabling scalable and consistent environments.</li>
-              <li>Assisted in validating ERP auditing scripts, improving accuracy and reliability of security analysis processes.</li>
-              <li>Contributed to cloud architecture design using AWS services including Lambda, S3, and API Gateway.</li>
-              <li>Produced structured technical documentation, improving clarity of project deliverables for stakeholders.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
-              <span class="tag">R</span>
-              <span class="tag">Docker</span>
-              <span class="tag">AWS</span>
-              <span class="tag">IBM Informix</span>
-              <span class="tag">Pronto ERP</span>
-              <span class="tag">GitLab</span>
-            </div>
-          </div>
-          <div class="card project-card">
-            <div class="small-label">Employer value</div>
-            <h3>Demonstrates technical capability, problem-solving skills, and the ability to contribute effectively in a collaborative project environment.</h3>
-            <div class="small-label" style="margin-top:18px;">Project media area</div>
-            <p>
-              Here you can view project-related visuals including the BI dashboard and presentation highlights that demonstrate the project outcomes and teamwork.
-            </p>
-          </div>
-        </div>
-        <div class="project-showcase">
-          <div class="project-photo">
-            <div class="project-thumb">
-              <div class="image-frame">
-                <img src="assets/images/project-1.jpg" alt="Project visual 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add project image or diagram 01<br />assets/images/project-1.jpg</div>
-              </div>
-            </div>
-            <div class="project-caption">Final project presentation with team members and mentors.</div>
-          </div>
-          <div class="project-photo">
-            <div class="project-thumb">
-              <div class="image-frame">
-                <img src="assets/images/project-2.jpg" alt="Project visual 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add project image or diagram 02<br />assets/images/project-2.jpg</div>
-              </div>
-            </div>
-            <div class="project-caption">Dashboard visualization highlighting project performance and analytics.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Academic progression</div>
-            <h2>Education</h2>
-          </div>
-        </div>
-        <div class="timeline">
-          <div class="card edu-card">
-            <div class="date">2024 – 2026</div>
-            <h3>Master of Information Systems and Technology</h3>
-            <p>Curtin University, Australia</p>
-            <p>Major in Data Analytics & Visualisation</p>
-          </div>
-          <div class="card edu-card">
-            <div class="date">2021 – 2022</div>
-            <h3>Master of Information Science and Library Management</h3>
-            <p>University of Rajshahi, Bangladesh</p>
-          </div>
-          <div class="card edu-card">
-            <div class="date">2017 – 2020</div>
-            <h3>Bachelor of Information Science and Library Management</h3>
-            <p>University of Rajshahi, Bangladesh</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Additional credibility</div>
-            <h2>Experience & Research</h2>
-          </div>
-        </div>
-        <div class="two-col">
-          <div class="card timeline-card">
-            <div class="date">January 2022</div>
-            <h3>Intern – Record Management & Documentation</h3>
-            <p>Government District Public Library, Rajshahi, Bangladesh</p>
-            <p style="margin-top:10px;">
-              Improved record accessibility by organising and structuring archival documentation systems, classified and indexed information resources to enhance retrieval efficiency, and supported cataloguing processes while maintaining accurate data records.
-            </p>
-          </div>
-          <div class="card pub-card">
-            <div class="date">2024</div>
-            <h3>Research Publication</h3>
-            <p><strong>“A Deep Learning and Machine Learning Approach to Predict Neonatal Death in the Context of São Paulo”</strong></p>
-            <p>International Journal of Public Health, 2024</p>
-            <p style="margin-top:10px;">Applied machine learning models to analyse healthcare datasets and contributed to predictive analytics research supporting data-driven health insights.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Credentials</div>
-            <h2>Certifications & Memberships</h2>
-          </div>
-        </div>
-        <div class="card cert-card" style="margin-bottom:18px;">
-          <h3>Certification Gallery</h3>
-          <p style="margin-bottom:16px;">
-          <div class="credential-grid">
-            <div class="credential-item">
-              <div class="credential-thumb">
-                <div class="image-frame">
-                  <img src="assets/images/certificate-1.jpg" alt="Digital Literacy Course certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                  <div class="image-fallback">Add certificate image 01<br />assets/images/certificate-1.jpg</div>
-                </div>
-              </div>
-              <p><strong>Digital Literacy Course</strong></p>
-              <p>ICT Division, Bangladesh | 2022</p>
-            </div>
-            <div class="credential-item">
-              <div class="credential-thumb">
-                <div class="image-frame">
-                  <img src="assets/images/certificate-2.jpg" alt="Computer and ICT Skills certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                  <div class="image-fallback">Add certificate image 02<br />assets/images/certificate-2.jpg</div>
-                </div>
-              </div>
-              <p><strong>Computer & ICT Skills Certificate</strong></p>
-              <p>University of Rajshahi, Bangladesh | 2022</p>
-            </div>
-            <div class="credential-item">
-              <div class="credential-thumb">
-                <div class="image-frame">
-                  <img src="assets/images/certificate-3.jpg" alt="Future certificate 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                  <div class="image-fallback">Add future certificate image 03<br />assets/images/certificate-3.jpg</div>
-                </div>
-              </div>
-              <p><strong>Publication Certificate</strong></p>
-              <p>International Journal of Public Health | 2024</p>
-            </div>
-            <div class="credential-item">
-              <div class="credential-thumb">
-                <div class="image-frame">
-                  <img src="assets/images/certificate-4.jpg" alt="Future certificate 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                  <div class="image-fallback">Add future certificate image 04<br />assets/images/certificate-4.jpg</div>
-                </div>
-              </div>
-              <p><strong>Internship Certificate</strong></p>
-              <p>Divisional Government Public Library, Rajshahi | 2022</p>
-            </div>
-          </div>
-        </div>
-        <div class="membership-grid">
-          <div class="membership-item">
-            <p><strong>Australian Computer Society</strong></p>
-            <p>Member | 2024 – Present</p>
-          </div>
-          <div class="membership-item">
-            <p><strong>Study Perth</strong></p>
-            <p>Member | 2023 – Present</p>
-          </div>
-          <div class="membership-item">
-            <p><strong>Curtin Student Guild</strong></p>
-            <p>Member | 2024 – Present</p>
-          </div>
-          <div class="membership-item">
-            <p><strong>Future Professional Body</strong></p>
-            <p>Add more memberships or badges here.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="activities">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Leadership and impact</div>
-            <h2>Leadership & Community Engagement</h2>
-          </div>
-        </div>
-        <div class="two-col" style="margin-bottom:18px;">
-          <div class="card activity-card">
-            <h3>Active Blood Donor – Australian Red Cross</h3>
-            <p>2026 – Present</p>
-            <ul style="margin-top:10px;">
-              <li>Contributing to community-based health support through active blood donation participation.</li>
-            </ul>
-          </div>
-          <div class="card activity-card">
-            <h3>President – COIN Social Organisation</h3>
-            <p>2019 – 2021</p>
-            <ul style="margin-top:10px;">
-              <li>Coordinated community initiatives, volunteers, and team-based activities.</li>
-              <li>Supported event organisation and community engagement efforts.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="two-col" style="margin-bottom:18px;">
-          <div class="card activity-card">
-            <h3>Founding President – Blood Donate Club, Rajshahi</h3>
-            <p>2015 – 2020</p>
-            <ul style="margin-top:10px;">
-              <li>Led community-based blood donation initiatives and volunteer coordination.</li>
-              <li>Managed operational activities and organisational planning.</li>
-            </ul>
-          </div>
-          <div class="card gallery-shell">
-            <h3>Activity Photo Area</h3>
-            <p>Checkout some of my activity photo below..</p>
-          </div>
-        </div>
-        <div class="activity-grid">
-          <div class="gallery-item">
-            <div class="activity-thumb">
-              <div class="image-frame">
-                <img src="assets/images/activity-1.jpg" alt="Activity image 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add activity image 01<br />assets/images/activity-1.jpg</div>
-              </div>
-            </div>
-            <div class="gallery-caption">First Blood Donation at Australia | 2026.</div>
-          </div>
-          <div class="gallery-item">
-            <div class="activity-thumb">
-              <div class="image-frame">
-                <img src="assets/images/activity-2.JPG" alt="Activity image 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add activity image 02<br />assets/images/activity-2.jpg</div>
-              </div>
-            </div>
-            <div class="gallery-caption">International Children's Day Festival | 2015.</div>
-          </div>
-          <div class="gallery-item">
-            <div class="activity-thumb">
-              <div class="image-frame">
-                <img src="assets/images/activity-3.JPG" alt="Activity image 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add activity image 03<br />assets/images/activity-3.jpg</div>
-              </div>
-            </div>
-            <div class="gallery-caption">Taking Certificate from Associate Professor, RU | 2019.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Visual portfolio extension</div>
-            <h2>Professional Gallery</h2>
-          </div>
-        </div>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div class="gallery-thumb">
-              <div class="image-frame">
-                <img src="assets/images/gallery-1.jpg" alt="Gallery image 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add gallery image 01<br />assets/images/gallery-1.jpg</div>
-              </div>
-            </div>
-            <div class="gallery-caption">Showcasing our "Project Verify" at Curtin | 2026.</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-thumb">
-              <div class="image-frame">
-                <img src="assets/images/gallery-2.jpg" alt="Gallery image 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add gallery image 02<br />assets/images/gallery-2.jpg</div>
-              </div>
-            </div>
-            <div class="gallery-caption">Showcasing our "Project Verify" at Curtin | 2026.</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-thumb">
-              <div class="image-frame">
-                <img src="assets/images/gallery-3.jpg" alt="Gallery image 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-                <div class="image-fallback">Add gallery image 03<br />assets/images/gallery-3.jpg</div>
-              </div>
-            </div>
-            <div class="gallery-caption">Volunteering, International Conference, RU | 2019.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Professional contact</div>
-            <h2>Let’s Connect</h2>
-          </div>
-        </div>
-        <div class="card contact-card">
-          <div>
-            <h3 style="margin-top:0; margin-bottom:10px;">Available for early-career opportunities</h3>
-            <p>
-              I am interested in opportunities where I can contribute through data analysis, reporting, business process understanding,
-              technical problem solving, and structured documentation. I am particularly interested in Data Analyst, Business Analyst,
-              reporting, and technical support roles with analytical responsibility.
-            </p>
-            <div class="contact-links">
-              <a class="contact-link" href="mailto:arath.kabir@gmail.com"><strong>Email</strong><br />arath.kabir@gmail.com</a>
-              <a class="contact-link" href="https://www.linkedin.com/in/ahteshamul-kabir" target="_blank" rel="noreferrer"><strong>LinkedIn</strong><br />www.linkedin.com/in/ahteshamul-kabir</a>
-              <a class="contact-link" href="assets/resume/final-resume.pdf" target="_blank"><strong>Resume</strong><br />Open the downloadable PDF version of my resume</a>
-            </div>
-          </div>
-      </div>
+      </section>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-     © 2026 A Z M Ahteshamul Kabir. All Rights Reserved.
-
-Professional Portfolio | Data Analytics • Business Analytics • Information Systems
+  <section class="tech-strip-section">
+    <div class="container tech-strip reveal">
+      <span>SQL</span>
+      <span>Python</span>
+      <span>Power BI</span>
+      <span>R</span>
+      <span>AWS</span>
+      <span>Docker</span>
+      <span>Git</span>
+      <span>IBM Informix</span>
     </div>
+  </section>
+
+  <section id="about" class="content-section">
+    <div class="container two-col">
+      <div>
+        <span class="section-label">About</span>
+        <h2>Professional Profile</h2>
+      </div>
+      <div class="text-panel reveal">
+        <p>
+          Data Analytics and Business Analytics professional with a strong foundation in data analysis, data visualisation,
+          and information systems. Proficient in SQL, Python, R, Power BI and Excel, with the ability to transform complex
+          datasets into actionable insights that support informed business decision-making.
+        </p>
+        <p>
+          Experienced in ERP data analysis, system security validation, cloud-based solution design, encryption mechanisms,
+          containerised deployment and structured technical documentation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="content-section career-timeline-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Career Timeline</span>
+        <h2>Key milestones</h2>
+      </div>
+
+      <div class="career-timeline">
+        <div class="career-item reveal">
+          <span>2024 – 2026</span>
+          <h3>Curtin University</h3>
+          <p>Master of Information Systems and Technology, majoring in Data Analytics & Visualisation.</p>
+        </div>
+        <div class="career-item reveal">
+          <span>2026</span>
+          <h3>Scope Systems Consultancy Project</h3>
+          <p>ERP security validation, cloud architecture, documentation and technical support contribution.</p>
+        </div>
+        <div class="career-item reveal">
+          <span>2024</span>
+          <h3>Research Publication</h3>
+          <p>Machine learning and deep learning research contribution in public health analytics.</p>
+        </div>
+        <div class="career-item reveal">
+          <span>2022</span>
+          <h3>Master Degree Completed</h3>
+          <p>Master of Information Science and Library Management from University of Rajshahi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="content-section soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Skills</span>
+        <h2>Core Capabilities</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <h3>Data Analytics & BI</h3>
+          <p>SQL, Python, R, Power BI, Excel, dashboards, reporting and data interpretation.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Data & Systems</h3>
+          <p>Data cleaning, transformation, data modelling, database design and ERP data analysis.</p>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Tools & Technologies</h3>
+          <p>Jupyter Notebook, VS Code, Git, GitHub, GitLab, Microsoft Visio and IBM Informix.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="project" class="content-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Portfolio</span>
+        <h2>Featured Project</h2>
+      </div>
+
+      <div class="project-panel reveal">
+        <div>
+          <span class="project-meta">Scope Systems, Australia | 2026</span>
+          <h3>ERP Security Validation & Cloud Architecture</h3>
+          <p>
+            Role: Technical Support & Documentation Manager. Analysed ERP security datasets, improved hardcoded credential
+            handling, supported AES encryption, Docker deployment and AWS cloud architecture design.
+          </p>
+          <div class="tag-row">
+            <span>Python</span><span>SQL</span><span>R</span><span>Docker</span><span>AWS</span><span>IBM Informix</span>
+          </div>
+        </div>
+        <div class="project-mini-grid">
+          <div><strong>Security</strong><span>Credential handling and AES encryption</span></div>
+          <div><strong>Analytics</strong><span>ERP data validation using SQL and Python</span></div>
+          <div><strong>Cloud</strong><span>AWS Lambda, S3 and API Gateway</span></div>
+          <div><strong>Documentation</strong><span>Reports and stakeholder deliverables</span></div>
+        </div>
+      </div>
+
+      <div class="media-grid">
+        <figure class="media-card reveal">
+          <img src="assets/images/project-1.jpg" alt="Project presentation">
+          <figcaption>Final project presentation with team members and mentors.</figcaption>
+        </figure>
+        <figure class="media-card reveal">
+          <img src="assets/images/project-2.jpg" alt="Project dashboard">
+          <figcaption>Dashboard visualisation highlighting project performance and analytics.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="content-section soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Education</span>
+        <h2>Academic Background</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <span>2024 – 2026</span>
+          <h3>Master of Information Systems and Technology</h3>
+          <p>Curtin University, Australia | Major in Data Analytics & Visualisation</p>
+        </div>
+        <div class="timeline-item reveal">
+          <span>2021 – 2022</span>
+          <h3>Master of Information Science and Library Management</h3>
+          <p>University of Rajshahi, Bangladesh</p>
+        </div>
+        <div class="timeline-item reveal">
+          <span>2017 – 2020</span>
+          <h3>Bachelor of Information Science and Library Management</h3>
+          <p>University of Rajshahi, Bangladesh</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="content-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Certificates</span>
+        <h2>Credentials</h2>
+      </div>
+
+      <div class="certificate-slider">
+        <figure class="media-card reveal"><img src="assets/images/certificate-1.jpg" alt="Certificate"><figcaption>Digital Literacy Course | ICT Division, Bangladesh | 2022</figcaption></figure>
+        <figure class="media-card reveal"><img src="assets/images/certificate-2.jpg" alt="Certificate"><figcaption>Computer & ICT Skills Certificate | University of Rajshahi | 2022</figcaption></figure>
+        <figure class="media-card reveal"><img src="assets/images/certificate-3.jpg" alt="Certificate"><figcaption>Publication Certificate | International Journal of Public Health | 2024</figcaption></figure>
+        <figure class="media-card reveal"><img src="assets/images/certificate-4.jpg" alt="Certificate"><figcaption>Internship Certificate | Divisional Government Public Library | 2022</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" class="content-section soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Activities</span>
+        <h2>Leadership & Community Engagement</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal"><h3>Active Blood Donor</h3><p>Australian Red Cross | 2026 – Present</p></article>
+        <article class="skill-card reveal"><h3>President</h3><p>COIN Social Organisation | 2019 – 2021</p></article>
+        <article class="skill-card reveal"><h3>Founding President</h3><p>Blood Donate Club, Rajshahi | 2015 – 2020</p></article>
+      </div>
+
+      <div class="certificate-slider">
+        <figure class="media-card reveal"><img src="assets/images/activity-1.jpg" alt="Activity"><figcaption>First Blood Donation in Australia | 2026</figcaption></figure>
+        <figure class="media-card reveal"><img src="assets/images/activity-2.jpg" alt="Activity"><figcaption>International Children's Day Festival | 2015</figcaption></figure>
+        <figure class="media-card reveal"><img src="assets/images/activity-3.jpg" alt="Activity"><figcaption>Receiving Certificate from Associate Professor, RU | 2019</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section contact">
+    <div class="container contact-box reveal">
+      <div>
+        <span class="section-label">Contact</span>
+        <h2>Let’s Connect</h2>
+        <p>Available for Data Analyst, Business Analyst, Reporting and data-focused Technical Support opportunities.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:arath.kabir@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/ahteshamul-kabir" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a href="assets/resume/final-resume.pdf" target="_blank">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 A Z M Ahteshamul Kabir. All Rights Reserved.</p>
+    <p>Built and designed by A Z M Ahteshamul Kabir</p>
+    <p>Data Analytics • Business Analytics • Information Systems | Perth, Western Australia</p>
   </footer>
 </body>
 </html>
